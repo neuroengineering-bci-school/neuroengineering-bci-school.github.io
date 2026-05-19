@@ -81,23 +81,21 @@
   }
   .hero-content {
     position: relative; z-index: 2;
-    max-width: 1100px; margin: 0 auto;
-    padding: 7rem 2rem 4rem;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    max-width: 900px; margin: 0 auto;
+    padding: 8rem 2rem 5rem;
   }
-  .hero-left {}
   .hero-tag {
     display: inline-flex; align-items: center; gap: 0.5rem;
     background: transparent;
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 2px;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.6);
     font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     padding: 0.35rem 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   .hero-tag::before {
     content: ''; width: 5px; height: 5px;
@@ -106,26 +104,22 @@
   }
   h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
     color: var(--white);
     line-height: 1.15;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
     font-weight: 400;
+    max-width: 750px;
   }
-  h1 em {
-    font-style: italic;
-    color: rgba(255,255,255,0.75);
-  }
+  h1 em { font-style: italic; color: rgba(255,255,255,0.75); }
   .hero-meta {
-    display: flex; flex-direction: column; gap: 0.6rem;
-    margin-bottom: 2rem;
-  }
-  .hero-meta-item {
-    display: flex; align-items: center; gap: 0.75rem;
-    color: rgba(255,255,255,0.75);
+    display: flex; flex-wrap: wrap; gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    color: rgba(255,255,255,0.65);
     font-size: 0.95rem;
   }
-  .hero-meta-item svg { opacity: 0.6; flex-shrink: 0; }
+  .hero-meta-item { display: flex; align-items: center; gap: 0.6rem; }
+  .hero-meta-item svg { opacity: 0.5; flex-shrink: 0; }
   .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn-primary {
     background: var(--accent);
@@ -153,53 +147,9 @@
   }
   .btn-outline:hover { border-color: var(--accent); background: rgba(59,158,222,0.1); }
 
-  .hero-right {
-    display: flex; flex-direction: column; gap: 1rem;
-  }
-  .hero-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 8px;
-    padding: 1.25rem 1.5rem;
-  }
-  .hero-card-label {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 0.35rem;
-  }
-  .hero-card-value {
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  .hero-card-sub {
-    color: rgba(255,255,255,0.5);
-    font-size: 0.85rem;
-    margin-top: 0.15rem;
-  }
-  .logos-row {
-    display: flex; align-items: center; gap: 1.5rem;
-    margin-top: 1rem;
-    padding: 1rem 1.5rem;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 8px;
-  }
-  .logos-row span {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: rgba(255,255,255,0.4);
-    white-space: nowrap;
-  }
-  .logos-row img { height: 28px; filter: brightness(0) invert(1); opacity: 0.8; }
-
   /* SECTIONS */
   section { padding: 5rem 2rem; }
-  .container { max-width: 1100px; margin: 0 auto; }
+  .container { max-width: 900px; margin: 0 auto; }
   .section-label {
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -219,65 +169,73 @@
   .section-intro {
     font-size: 1.05rem;
     color: var(--gray);
-    max-width: 580px;
+    max-width: 620px;
     line-height: 1.8;
+    margin-bottom: 2.5rem;
   }
 
-  /* ABOUT */
+  /* ABOUT + WHY */
   .about { background: var(--off-white); }
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
-    align-items: start; margin-top: 3rem;
+  .about-split {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start; margin-top: 1rem;
   }
-  .about-text p {
-    color: #3d3428;
-    line-height: 1.85;
-    margin-bottom: 1.1rem;
-    font-size: 0.97rem;
+  .about-para {
+    color: #3d3428; line-height: 1.85;
+    font-size: 1rem; margin-bottom: 1.25rem;
   }
-  .about-stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+  .about-funding {
+    font-size: 0.88rem; color: var(--gray);
+    line-height: 1.7;
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+    margin-top: 0.5rem;
   }
-  .stat-card {
-    background: var(--white);
-    border: 1px solid var(--gray-light);
-    border-radius: 4px;
-    padding: 1.5rem;
+  .about-right .section-label { margin-bottom: 1rem; }
+  .why-list { list-style: none; padding: 0; margin-top: 0; }
+  .why-list li {
+    color: var(--gray); font-size: 0.93rem;
+    line-height: 1.5; padding: 0.55rem 0;
+    border-bottom: 1px solid var(--gray-light);
+    padding-left: 1.25rem; position: relative;
   }
-  .stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
-    color: var(--blue);
-    line-height: 1;
-    margin-bottom: 0.25rem;
-    font-weight: 400;
-  }
-  .stat-label {
-    font-size: 0.78rem;
-    color: var(--gray);
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
+  .why-list li::before { content: '→'; color: var(--accent); position: absolute; left: 0; }
 
-  /* WHY ATTEND */
-  .why-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem; margin-top: 3rem;
+  /* VENUE */
+  .venue { background: var(--off-white); }
+  .venue-caption { font-size: 0.88rem; color: var(--gray); margin-bottom: 2rem; }
+  .venue-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; align-items: stretch;
   }
-  .why-card {
-    border-left: 2px solid var(--gray-light);
-    padding: 0 0 0 1.5rem;
-    transition: border-color 0.2s;
+  .venue-photo {
+    border-radius: 3px; overflow: hidden;
+    border: 1px solid var(--gray-light);
+    aspect-ratio: 4/3;
+    background: var(--gray-light);
+    position: relative;
   }
-  .why-card:hover { border-color: var(--accent); }
-  .why-icon { display: none; }
-  .why-card h3 {
-    font-size: 0.95rem; font-weight: 600;
-    color: var(--navy); margin-bottom: 0.6rem;
-    letter-spacing: 0.01em;
+  .venue-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .venue-photo-placeholder {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gray); font-size: 0.85rem;
+    background: #e6e2db;
   }
-  .why-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.7; }
+  .venue-photo.no-img img { display: none; }
+  .venue-map { border-radius: 3px; overflow: hidden; border: 1px solid var(--gray-light); aspect-ratio: 4/3; }
+  .venue-map iframe { width: 100%; height: 100%; border: none; }
+
+  /* ORGANIZERS */
+  .organizers-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
+  .org-card {
+    display: flex; align-items: center; gap: 1.25rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px; padding: 1.25rem 1.75rem;
+  }
+  .org-logo { height: 36px; width: auto; }
+  .org-name { font-weight: 600; font-size: 0.95rem; color: var(--navy); }
+  .org-sub { font-size: 0.8rem; color: var(--gray); }
 
   /* PROGRAM */
   .program { background: var(--navy); }
@@ -307,10 +265,7 @@
     margin-bottom: -1px;
   }
   .day-btn:hover { color: rgba(255,255,255,0.8); }
-  .day-btn.active {
-    color: var(--white);
-    border-bottom-color: var(--accent);
-  }
+  .day-btn.active { color: var(--white); border-bottom-color: var(--accent); }
   .day-panel { display: none; }
   .day-panel.active { display: block; }
   .day-title {
@@ -321,14 +276,12 @@
     font-weight: 400;
   }
   .day-subtitle {
-    color: var(--accent);
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,0.45);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
   }
-  .session-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .session-list { display: flex; flex-direction: column; gap: 0.5rem; }
   .session {
     display: grid; grid-template-columns: 110px auto 1fr;
     gap: 1rem; align-items: start;
@@ -337,23 +290,12 @@
     border-radius: 6px;
     padding: 1rem 1.25rem;
   }
-  .session.break {
-    background: transparent; border: none; padding: 0.25rem 1.25rem;
-  }
-  .session-time {
-    font-size: 0.8rem; color: rgba(255,255,255,0.45);
-    font-weight: 500; padding-top: 2px; white-space: nowrap;
-  }
+  .session.break { background: transparent; border: none; padding: 0.25rem 1.25rem; }
+  .session-time { font-size: 0.8rem; color: rgba(255,255,255,0.4); font-weight: 500; padding-top: 2px; white-space: nowrap; }
   .session-badge {
-    font-size: 0.68rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 0.2rem 0.6rem;
-    border-radius: 3px;
-    white-space: nowrap;
-    align-self: start;
-    margin-top: 2px;
+    font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.06em; padding: 0.2rem 0.6rem; border-radius: 3px;
+    white-space: nowrap; align-self: start; margin-top: 2px;
   }
   .badge-lecture { background: rgba(59,158,222,0.2); color: #7ec8f0; }
   .badge-hands { background: rgba(34,197,94,0.15); color: #6ee7a0; }
@@ -362,16 +304,12 @@
   .badge-dev { background: rgba(200,150,26,0.2); color: #f0c857; }
   .badge-ceremony { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); }
   .badge-break { background: transparent; color: rgba(255,255,255,0.3); font-size: 0.75rem; }
-  .session-info h4 {
-    color: var(--white); font-size: 0.93rem; font-weight: 500; margin-bottom: 0.2rem;
-  }
-  .session-info p {
-    color: rgba(255,255,255,0.45); font-size: 0.8rem; line-height: 1.5;
-  }
+  .session-info h4 { color: var(--white); font-size: 0.93rem; font-weight: 500; margin-bottom: 0.2rem; }
+  .session-info p { color: rgba(255,255,255,0.4); font-size: 0.8rem; line-height: 1.5; }
 
   /* SPEAKERS */
   .speakers-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem; margin-top: 3rem;
   }
   .speaker-card {
@@ -380,15 +318,11 @@
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
   }
-  .speaker-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(10,22,40,0.08);
-  }
+  .speaker-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(10,22,40,0.08); }
   .speaker-photo {
     width: 100%; aspect-ratio: 1;
     background: var(--off-white);
     display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
   }
   .speaker-initials {
     font-family: 'Playfair Display', serif;
@@ -398,62 +332,16 @@
     font-weight: 400;
   }
   .speaker-info { padding: 1.25rem; }
-  .speaker-name {
-    font-weight: 600; font-size: 0.97rem;
-    color: var(--navy); margin-bottom: 0.3rem;
-  }
-  .speaker-role {
-    font-size: 0.8rem; color: var(--gray);
-    line-height: 1.5; margin-bottom: 0.75rem;
-  }
-  .speaker-tag {
-    display: inline-block;
-    background: transparent;
-    color: var(--gray);
-    font-size: 0.68rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border: 1px solid var(--gray-light);
-    padding: 0.2rem 0.6rem;
-    border-radius: 2px;
-  }
-  .speaker-card.tbd {
-    border-style: dashed;
-    opacity: 0.45;
-  }
-
-  /* VENUE */
-  .venue { background: var(--off-white); }
-  .venue-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 3rem; align-items: center; margin-top: 3rem;
-  }
-  .venue-text p {
-    color: #3d3428; line-height: 1.85;
-    font-size: 0.97rem; margin-bottom: 1rem;
-  }
-  .venue-features { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; }
-  .venue-feature {
-    display: flex; align-items: center; gap: 0.75rem;
-    font-size: 0.88rem; color: var(--gray);
-  }
-  .venue-feature svg { color: var(--accent); flex-shrink: 0; }
-  .venue-map {
-    border-radius: 3px; overflow: hidden;
-    border: 1px solid var(--gray-light);
-    aspect-ratio: 4/3;
-  }
-  .venue-map iframe { width: 100%; height: 100%; border: none; }
+  .speaker-name { font-weight: 600; font-size: 0.97rem; color: var(--navy); margin-bottom: 0.3rem; }
+  .speaker-role { font-size: 0.8rem; color: var(--gray); line-height: 1.5; }
+  .speaker-card.tbd { border-style: dashed; opacity: 0.45; }
 
   /* APPLY */
   .apply { background: var(--navy); }
   .apply h2 { color: var(--white); font-weight: 400; }
   .apply .section-label { color: rgba(255,255,255,0.4); }
-  .apply-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 3rem; margin-top: 3rem;
-  }
+  .apply .section-intro { color: rgba(255,255,255,0.5); }
+  .apply-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; }
   .apply-box {
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.08);
@@ -461,107 +349,42 @@
     padding: 2rem;
   }
   .apply-box h3 {
-    color: var(--white); font-size: 1rem;
-    font-weight: 500; margin-bottom: 1rem;
+    color: var(--white); font-weight: 500; margin-bottom: 1rem;
     text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem;
   }
-  .apply-box p, .apply-box li {
+  .apply-box li {
     color: rgba(255,255,255,0.55);
     font-size: 0.9rem; line-height: 1.8;
+    list-style: none; margin-bottom: 0.65rem;
+    padding-left: 1rem; position: relative;
   }
-  .apply-box ul { list-style: none; padding: 0; }
-  .apply-box li { margin-bottom: 0.65rem; padding-left: 1rem; position: relative; }
-  .apply-box li::before {
-    content: '→';
-    color: var(--accent);
-    position: absolute; left: 0;
-  }
-  .travel-grant-box {
-    border: 1px solid rgba(184,115,51,0.35);
-    background: rgba(184,115,51,0.06);
-    border-radius: 3px;
-    padding: 2rem;
-    margin-top: 1.5rem;
-  }
-  .travel-grant-box h3 {
-    color: #d4945a;
-    font-size: 0.8rem; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 0.1em;
-    display: flex; align-items: center; gap: 0.6rem;
-    margin-bottom: 0.85rem;
-  }
-  .travel-grant-box p {
-    color: rgba(255,255,255,0.55);
-    font-size: 0.9rem; line-height: 1.8;
-  }
-  .apply-cta {
-    margin-top: 2.5rem; text-align: center;
-  }
-  .apply-deadline {
-    color: rgba(255,255,255,0.3);
-    font-size: 0.8rem;
-    margin-top: 1rem;
-    letter-spacing: 0.03em;
-  }
-
-  /* ORGANIZERS */
-  .organizers-grid {
-    display: flex; gap: 2rem; align-items: center;
-    flex-wrap: wrap; margin-top: 3rem;
-  }
-  .org-card {
-    display: flex; align-items: center; gap: 1rem;
-    border: 1px solid var(--gray-light);
-    border-radius: 8px;
-    padding: 1.25rem 1.75rem;
-  }
-  .org-logo-placeholder {
-    width: 48px; height: 48px;
-    background: var(--navy);
-    border-radius: 6px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .org-logo-placeholder img { height: 28px; filter: brightness(0) invert(1); }
-  .org-name { font-weight: 600; font-size: 0.95rem; color: var(--navy); }
-  .org-sub { font-size: 0.8rem; color: var(--gray); }
+  .apply-box li::before { content: '→'; color: var(--accent); position: absolute; left: 0; }
+  .apply-box ul { padding: 0; }
 
   /* CONTACT */
   .contact { background: var(--navy); text-align: center; }
   .contact h2 { color: var(--white); }
   .contact .section-intro { color: rgba(255,255,255,0.55); margin: 0 auto 2rem; }
   .contact-email {
-    display: inline-block;
-    color: var(--accent);
-    font-size: 1.1rem;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(59,158,222,0.3);
-    padding-bottom: 2px;
-    transition: border-color 0.2s;
+    display: inline-block; color: var(--accent); font-size: 1.1rem;
+    text-decoration: none; border-bottom: 1px solid rgba(59,158,222,0.3);
+    padding-bottom: 2px; transition: border-color 0.2s;
   }
   .contact-email:hover { border-color: var(--accent); }
-  .contact-lab {
-    margin-top: 1rem;
-    color: rgba(255,255,255,0.4);
-    font-size: 0.85rem;
-  }
+  .contact-lab { margin-top: 1rem; color: rgba(255,255,255,0.4); font-size: 0.85rem; }
   .contact-lab a { color: rgba(255,255,255,0.6); text-decoration: none; }
   .contact-lab a:hover { color: var(--accent); }
 
   /* FOOTER */
   footer {
-    background: rgba(0,0,0,0.3);
     border-top: 1px solid rgba(255,255,255,0.06);
-    padding: 2rem;
-    text-align: center;
+    padding: 2rem; text-align: center;
     background-color: var(--navy);
   }
   footer p { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
-  footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
-  footer a:hover { color: var(--accent); }
 
   @media (max-width: 768px) {
-    .hero-content { grid-template-columns: 1fr; gap: 2rem; }
-    .about-grid, .venue-grid, .apply-grid { grid-template-columns: 1fr; }
+    .about-split, .venue-grid, .apply-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     .session { grid-template-columns: 90px auto 1fr; }
   }
@@ -587,125 +410,49 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-left">
-      <div class="hero-tag">Foundation Training School · 2027</div>
-      <h1>1st Latin American Training School on <em>Neuroengineering</em> and Brain-Computer Interfaces</h1>
-      <div class="hero-meta">
-        <div class="hero-meta-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          XXX, 2027 &nbsp;·&nbsp; 5 days (Monday–Friday)
-        </div>
-        <div class="hero-meta-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Tecnologico de Monterrey, Campus Guadalajara
-        </div>
-        <div class="hero-meta-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          9:00 AM – 3:00 PM daily &nbsp;·&nbsp; In-person
-        </div>
-        <div class="hero-meta-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          MSc & PhD students, Postdocs, Early-career researchers
-        </div>
+    <div class="hero-tag">Foundation Training School · 2027</div>
+    <h1>1st Latin American Training School on <em>Neuroengineering</em> and Brain-Computer Interfaces</h1>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        XXX, 2027 &nbsp;·&nbsp; 5 days
       </div>
-      <div class="hero-buttons">
-        <a href="#apply" class="btn-primary">Apply Now</a>
-        <a href="#program" class="btn-outline">View Program</a>
+      <div class="hero-meta-item">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Tecnologico de Monterrey, Guadalajara
+      </div>
+      <div class="hero-meta-item">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        MSc, PhD students and early-career researchers
       </div>
     </div>
-    <div class="hero-right">
-      <div class="hero-card">
-        <div class="hero-card-label">Format</div>
-        <div class="hero-card-value">In-person · 5 intensive days</div>
-        <div class="hero-card-sub">Lectures, hands-on workshops & mini-projects</div>
-      </div>
-      <div class="hero-card">
-        <div class="hero-card-label">Target Audience</div>
-        <div class="hero-card-value">MSc, PhD, Postdocs & Early-career researchers</div>
-        <div class="hero-card-sub">From Latin America and beyond</div>
-      </div>
-      <div class="hero-card">
-        <div class="hero-card-label">Funding</div>
-        <div class="hero-card-value">Travel grants being sought for participants</div>
-        <div class="hero-card-sub">Subject to funding approval</div>
-      </div>
-      <div class="logos-row">
-        <span>Organized by</span>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/ITESM_Logo.svg/320px-ITESM_Logo.svg.png" alt="Tec de Monterrey" style="height:22px; opacity:0.7">
-      </div>
+    <div class="hero-buttons">
+      <a href="#apply" class="btn-primary">Apply Now</a>
+      <a href="#program" class="btn-outline">View Program</a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT + WHY -->
 <section class="about" id="about">
   <div class="container">
-    <div class="section-label">About the School</div>
-    <h2>Bridging Neuroscience and Engineering in Latin America</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>This school grows out of a simple conviction: that Latin America has the talent, the curiosity, and the urgency to lead in neuroengineering — and that what many researchers in the region lack is not ability, but access to rigorous, hands-on training that connects neuroscience with engineering from the ground up.</p>
-        <p>Over five days in Guadalajara, participants will move through the entire arc of a brain-computer interface project. They will record real EEG signals from one another, learn to clean and analyze those signals with professional tools, operate a live BCI system, apply machine learning to neural data, and present their own research alongside peers from across the region.</p>
-        <p>The program is designed so that each day builds on the previous one. By Friday, participants will not only understand how BCI systems work — they will have built one themselves.</p>
+    <div class="about-split">
+      <div class="about-left">
+        <div class="section-label">About the School</div>
+        <h2>Bridging Neuroscience and Engineering in Latin America</h2>
+        <p class="about-para">A five-day intensive training school for researchers across Latin America and beyond, covering the full arc of neuroengineering from brain signals to working BCI systems. Open to MSc and PhD students, postdocs, and early-career researchers.</p>
+        <p class="about-funding">Travel support is being sought through IBRO funding for participants who need financial assistance to attend.</p>
       </div>
-      <div class="about-stats">
-        <div class="stat-card">
-          <div class="stat-number">5</div>
-          <div class="stat-label">Intensive days</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">22+</div>
-          <div class="stat-label">Hours of instruction</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">46%</div>
-          <div class="stat-label">Hands-on content</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">XXX</div>
-          <div class="stat-label">Participants (max)</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY ATTEND -->
-<section id="why">
-  <div class="container">
-    <div class="section-label">Why Attend</div>
-    <h2>An experience designed for impact</h2>
-    <p class="section-intro">From EEG acquisition to AI-based neural decoding, this school offers a unique end-to-end training in neuroengineering.</p>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon"></div>
-        <h3>Real hands-on experience</h3>
-        <p>You will record live EEG from other participants, run a full preprocessing pipeline in MNE-Python, operate a P300-based BCI, and see a tDCS demonstration on research-grade equipment. Nothing is simulated.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon"></div>
-        <h3>Faculty who work in the field</h3>
-        <p>Every instructor is an active researcher. The lectures come from people who have faced the same technical and clinical challenges you will encounter in your own work.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon"></div>
-        <h3>A Latin American community</h3>
-        <p>This school is designed to connect researchers across the region. Many participants will leave with collaborators, not just contacts — people working on the same problems from different angles.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon"></div>
-        <h3>Resources that last beyond the week</h3>
-        <p>Participants receive a certificate of completion along with curated datasets, annotated code repositories, and reading lists that continue to be useful long after the school ends.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon"></div>
-        <h3>Travel support being sought</h3>
-        <p>We are actively seeking funding to cover travel, accommodation, and meals for participants who need financial support to attend. We believe geography and economic background should not determine who gets access to this training.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon"></div>
-        <h3>Your research on display</h3>
-        <p>Two poster sessions give every participant space to present their own work and receive substantive feedback from faculty and peers throughout the week.</p>
+      <div class="about-right">
+        <div class="section-label">Why Attend</div>
+        <ul class="why-list">
+          <li>Hands-on experience with real EEG and BCI equipment</li>
+          <li>International faculty, active researchers in the field</li>
+          <li>Networking across Latin America</li>
+          <li>Present your own research</li>
+          <li>Certificate of completion and course materials</li>
+          <li>Open to applicants from all across LATAM</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -726,7 +473,6 @@
       <button class="day-btn" onclick="showDay('fri', this)">Friday</button>
     </div>
 
-    <!-- MONDAY -->
     <div class="day-panel active" id="day-mon">
       <div class="day-title">Monday · The Brain as a Signal Source</div>
       <div class="day-subtitle">Establishing the neuroscientific and clinical foundations of brain-computer interfaces</div>
@@ -739,69 +485,65 @@
         <div class="session"><div class="session-time">12:15 – 13:00</div><span class="session-badge badge-hands">Workshop</span><div class="session-info"><h4>EEG Recording</h4><p>Participants set up electrodes, record live EEG from one another, and identify real-time signal features and artifacts</p></div></div>
         <div class="session break"><div class="session-time">13:00 – 14:00</div><span class="session-badge badge-break">Lunch</span><div class="session-info"></div></div>
         <div class="session"><div class="session-time">14:00 – 14:30</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Functional Connectivity and Cortical Networks</h4><p>Coherence, phase-locking, and graph-theory approaches to understanding how brain regions communicate</p></div></div>
-        <div class="session"><div class="session-time">14:30 – 15:00</div><span class="session-badge badge-poster">Poster</span><div class="session-info"><h4>Participant Poster Session — Opening Round</h4><p>Each participant briefly introduces their research background. Faculty use this to calibrate teaching throughout the week</p></div></div>
+        <div class="session"><div class="session-time">14:30 – 15:00</div><span class="session-badge badge-poster">Poster</span><div class="session-info"><h4>Participant Poster Session — Opening Round</h4><p>Each participant briefly introduces their research background</p></div></div>
       </div>
     </div>
 
-    <!-- TUESDAY -->
     <div class="day-panel" id="day-tue">
       <div class="day-title">Tuesday · From Signal to Information</div>
       <div class="day-subtitle">Acquiring the analytical tools to transform raw EEG into interpretable neuroscientific data</div>
       <div class="session-list">
-        <div class="session"><div class="session-time">9:00 – 9:50</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>EEG Preprocessing and Artifact Removal</h4><p>Filtering strategies, ICA, epoching, and baseline correction — the essential steps before any analysis can begin</p></div></div>
+        <div class="session"><div class="session-time">9:00 – 9:50</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>EEG Preprocessing and Artifact Removal</h4><p>Filtering strategies, ICA, epoching, and baseline correction</p></div></div>
         <div class="session"><div class="session-time">9:50 – 10:40</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Event-Related Potentials and Sensorimotor Rhythms</h4><p>P300, N200, and error-related negativity; mu and beta ERD/ERS as the neural signature of motor intention</p></div></div>
         <div class="session break"><div class="session-time">10:40 – 11:00</div><span class="session-badge badge-break">Coffee Break</span><div class="session-info"></div></div>
         <div class="session"><div class="session-time">11:00 – 11:40</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Motor Imagery and Sensorimotor BCIs</h4><p>How imagining a movement activates the motor cortex and why sensorimotor rhythms are the foundation of rehabilitation-oriented BCIs</p></div></div>
         <div class="session"><div class="session-time">11:40 – 13:00</div><span class="session-badge badge-hands">Workshop</span><div class="session-info"><h4>EEG Preprocessing and Analysis</h4><p>MNE-Python pipeline on Monday's recorded data: filtering, ICA, ERP extraction, band-power computation, and connectivity analysis</p></div></div>
         <div class="session break"><div class="session-time">13:00 – 14:00</div><span class="session-badge badge-break">Lunch</span><div class="session-info"></div></div>
-        <div class="session"><div class="session-time">14:00 – 15:00</div><span class="session-badge badge-hands">Workshop</span><div class="session-info"><h4>EEG Preprocessing and Analysis — continued</h4><p>Participants complete and compare their preprocessing pipelines; group discussion of results and common analytical challenges</p></div></div>
+        <div class="session"><div class="session-time">14:00 – 15:00</div><span class="session-badge badge-hands">Workshop</span><div class="session-info"><h4>EEG Preprocessing and Analysis — continued</h4><p>Participants complete and compare their preprocessing pipelines; group discussion of results</p></div></div>
       </div>
     </div>
 
-    <!-- WEDNESDAY -->
     <div class="day-panel" id="day-wed">
       <div class="day-title">Wednesday · Building a Brain-Computer Interface</div>
       <div class="day-subtitle">From signal features to device control — designing, operating, and stimulating</div>
       <div class="session-list">
         <div class="session"><div class="session-time">9:00 – 9:50</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>BCI System Architecture and Paradigm Design</h4><p>The complete BCI pipeline: feature extraction, classification, feedback, and control. P300 and SSVEP paradigms for communication and prosthetic control</p></div></div>
-        <div class="session"><div class="session-time">9:50 – 10:40</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Hybrid BCIs: Combining EEG and EMG</h4><p>Why single-modality systems have limitations; hybrid signal architectures for orthosis and exoskeleton control; review of clinical deployments</p></div></div>
+        <div class="session"><div class="session-time">9:50 – 10:40</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Hybrid BCIs: Combining EEG and EMG</h4><p>Hybrid signal architectures for orthosis and exoskeleton control; review of clinical deployments</p></div></div>
         <div class="session break"><div class="session-time">10:40 – 11:00</div><span class="session-badge badge-break">Coffee Break</span><div class="session-info"></div></div>
-        <div class="session"><div class="session-time">11:00 – 11:50</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Non-Invasive Brain Stimulation</h4><p>Principles of NIBS; tDCS, TMS, and tACS mechanisms and protocols; effects on cortical excitability and neuroplasticity</p></div></div>
-        <div class="session"><div class="session-time">11:50 – 13:00</div><span class="session-badge badge-hands">Workshop</span><div class="session-info"><h4>BCI Operation and tDCS Demonstration</h4><p>Live operation of a P300 or SSVEP-based BCI system; participants take turns as operator and subject; tDCS setup demonstration</p></div></div>
+        <div class="session"><div class="session-time">11:00 – 11:50</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Non-Invasive Brain Stimulation</h4><p>tDCS, TMS, and tACS mechanisms and protocols; effects on cortical excitability and neuroplasticity</p></div></div>
+        <div class="session"><div class="session-time">11:50 – 13:00</div><span class="session-badge badge-hands">Workshop</span><div class="session-info"><h4>BCI Operation and tDCS Demonstration</h4><p>Live operation of a P300 or SSVEP-based BCI system; participants take turns as operator and subject</p></div></div>
         <div class="session break"><div class="session-time">13:00 – 14:00</div><span class="session-badge badge-break">Lunch</span><div class="session-info"></div></div>
-        <div class="session"><div class="session-time">14:00 – 15:00</div><span class="session-badge badge-hands">Workshop</span><div class="session-info"><h4>BCI Operation — continued</h4><p>Extended hands-on time; participants explore motor imagery paradigms and neurofeedback; faculty-guided troubleshooting</p></div></div>
+        <div class="session"><div class="session-time">14:00 – 15:00</div><span class="session-badge badge-hands">Workshop</span><div class="session-info"><h4>BCI Operation — continued</h4><p>Extended hands-on time; participants explore motor imagery paradigms and neurofeedback</p></div></div>
       </div>
     </div>
 
-    <!-- THURSDAY -->
     <div class="day-panel" id="day-thu">
       <div class="day-title">Thursday · Teaching Machines to Read the Brain</div>
       <div class="day-subtitle">Artificial intelligence, passive monitoring, and open science in neuroengineering</div>
       <div class="session-list">
-        <div class="session"><div class="session-time">9:00 – 9:50</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Machine Learning and Deep Learning for EEG</h4><p>LDA, SVM, and CSP for motor imagery; CNNs and EEGNet for end-to-end neural decoding; inter-subject variability and model generalization</p></div></div>
-        <div class="session"><div class="session-time">9:50 – 10:40</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Passive BCIs and Cognitive State Decoding</h4><p>Monitoring fatigue, attentional load, and cognitive state without active user input; applications in safety-critical environments and clinical assessment</p></div></div>
+        <div class="session"><div class="session-time">9:00 – 9:50</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Machine Learning and Deep Learning for EEG</h4><p>LDA, SVM, and CSP for motor imagery; CNNs and EEGNet for end-to-end neural decoding</p></div></div>
+        <div class="session"><div class="session-time">9:50 – 10:40</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Passive BCIs and Cognitive State Decoding</h4><p>Monitoring fatigue, attentional load, and cognitive state without active user input</p></div></div>
         <div class="session break"><div class="session-time">10:40 – 11:00</div><span class="session-badge badge-break">Coffee Break</span><div class="session-info"></div></div>
-        <div class="session"><div class="session-time">11:00 – 11:50</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Open Science and Reproducibility in Neuroscience</h4><p>Public EEG datasets, version-controlled pipelines, pre-registration, and FAIR data principles. Neuro-rights and data ethics</p></div></div>
-        <div class="session"><div class="session-time">11:50 – 13:00</div><span class="session-badge badge-hands">Workshop</span><div class="session-info"><h4>EEG Classification with Machine Learning</h4><p>End-to-end Python pipeline: feature extraction, training SVM and EEGNet classifiers, cross-validation, and performance evaluation</p></div></div>
+        <div class="session"><div class="session-time">11:00 – 11:50</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Open Science and Reproducibility in Neuroscience</h4><p>Public EEG datasets, version-controlled pipelines, pre-registration, and FAIR data principles</p></div></div>
+        <div class="session"><div class="session-time">11:50 – 13:00</div><span class="session-badge badge-hands">Workshop</span><div class="session-info"><h4>EEG Classification with Machine Learning</h4><p>End-to-end Python pipeline: feature extraction, training SVM and EEGNet classifiers, cross-validation</p></div></div>
         <div class="session break"><div class="session-time">13:00 – 14:00</div><span class="session-badge badge-break">Lunch</span><div class="session-info"></div></div>
-        <div class="session"><div class="session-time">14:00 – 14:30</div><span class="session-badge badge-dev">Professional Dev</span><div class="session-info"><h4>Grants and Scientific Writing</h4><p>Structuring a competitive research proposal; funding landscape for neuroengineering in Latin America: CONAHCYT, IBRO, NIH Fogarty</p></div></div>
-        <div class="session"><div class="session-time">14:30 – 15:00</div><span class="session-badge badge-mini">Mini-project</span><div class="session-info"><h4>Mini-Project Briefing and Team Formation</h4><p>Faculty present guidelines; teams are formed and each group selects its analytical focus and dataset</p></div></div>
+        <div class="session"><div class="session-time">14:00 – 14:30</div><span class="session-badge badge-dev">Professional Dev</span><div class="session-info"><h4>Grants and Scientific Writing</h4><p>Funding landscape for neuroengineering in Latin America: CONAHCYT, IBRO, NIH Fogarty</p></div></div>
+        <div class="session"><div class="session-time">14:30 – 15:00</div><span class="session-badge badge-mini">Mini-project</span><div class="session-info"><h4>Mini-Project Briefing and Team Formation</h4><p>Faculty present guidelines; teams are formed and each group selects its analytical focus</p></div></div>
       </div>
     </div>
 
-    <!-- FRIDAY -->
     <div class="day-panel" id="day-fri">
       <div class="day-title">Friday · From Lab to Life</div>
       <div class="day-subtitle">Clinical translation, participant showcases, and closing the school</div>
       <div class="session-list">
-        <div class="session"><div class="session-time">9:00 – 9:50</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>BCIs in Neurorehabilitation</h4><p>State of the art in BCI-assisted recovery for stroke, spinal cord injury, ALS, and Parkinson's disease; clinical evidence and current limitations</p></div></div>
-        <div class="session"><div class="session-time">9:50 – 10:20</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Career Paths in Neuroengineering</h4><p>Research groups, graduate programs, and funding opportunities in Latin America and globally; panel discussion with faculty</p></div></div>
+        <div class="session"><div class="session-time">9:00 – 9:50</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>BCIs in Neurorehabilitation</h4><p>BCI-assisted recovery for stroke, spinal cord injury, ALS, and Parkinson's disease; clinical evidence and current limitations</p></div></div>
+        <div class="session"><div class="session-time">9:50 – 10:20</div><span class="session-badge badge-lecture">Lecture</span><div class="session-info"><h4>Career Paths in Neuroengineering</h4><p>Research groups, graduate programs, and funding opportunities in Latin America and globally</p></div></div>
         <div class="session"><div class="session-time">10:20 – 11:00</div><span class="session-badge badge-mini">Mini-project</span><div class="session-info"><h4>Mini-Project: Integrated BCI Pipeline</h4><p>Teams finalize their pipeline integrating EEG recording, preprocessing, feature extraction, and AI classification</p></div></div>
         <div class="session break"><div class="session-time">11:00 – 11:15</div><span class="session-badge badge-break">Coffee Break</span><div class="session-info"></div></div>
-        <div class="session"><div class="session-time">11:15 – 12:30</div><span class="session-badge badge-mini">Mini-project</span><div class="session-info"><h4>Mini-Project Presentations</h4><p>Each team presents their pipeline and results (8–10 min); structured feedback from faculty and peers</p></div></div>
+        <div class="session"><div class="session-time">11:15 – 12:30</div><span class="session-badge badge-mini">Mini-project</span><div class="session-info"><h4>Mini-Project Presentations</h4><p>Each team presents their pipeline and results; structured feedback from faculty and peers</p></div></div>
         <div class="session"><div class="session-time">12:30 – 13:15</div><span class="session-badge badge-poster">Poster</span><div class="session-info"><h4>Participant Poster Session — Final Round</h4><p>Full poster session; participants display their own research; faculty and peers vote for the Best Poster Award</p></div></div>
         <div class="session break"><div class="session-time">13:15 – 14:00</div><span class="session-badge badge-break">Closing Lunch</span><div class="session-info"></div></div>
-        <div class="session"><div class="session-time">14:00 – 15:00</div><span class="session-badge badge-ceremony">Ceremony</span><div class="session-info"><h4>Closing Ceremony</h4><p>Certificate presentation, closing remarks, group photo, and open networking. Participants receive curated datasets, code repositories, and reading lists</p></div></div>
+        <div class="session"><div class="session-time">14:00 – 15:00</div><span class="session-badge badge-ceremony">Ceremony</span><div class="session-info"><h4>Closing Ceremony</h4><p>Certificate presentation, closing remarks, group photo, and open networking</p></div></div>
       </div>
     </div>
   </div>
@@ -810,63 +552,47 @@
 <!-- SPEAKERS -->
 <section id="speakers">
   <div class="container">
-    <div class="section-label">Confirmed Speakers</div>
+    <div class="section-label">Faculty</div>
     <h2>Distinguished international faculty</h2>
-    <p class="section-intro">Our faculty bring together expertise in neuroengineering, BCI systems, neurorehabilitation, and biomedical signal processing.</p>
     <div class="speakers-grid">
 
       <div class="speaker-card">
-        <div class="speaker-photo">
-          <div class="speaker-initials">JA</div>
-        </div>
+        <div class="speaker-photo"><div class="speaker-initials">JA</div></div>
         <div class="speaker-info">
           <div class="speaker-name">Dr. Javier Mauricio Antelis</div>
-          <div class="speaker-role">Director, Neurotechnology and BCI Laboratory (NTLab)<br>Tecnologico de Monterrey, Mexico</div>
-          <span class="speaker-tag">School Director</span>
+          <div class="speaker-role">Neurotechnology and BCI Laboratory (NTLab), Tecnologico de Monterrey</div>
         </div>
       </div>
 
       <div class="speaker-card">
-        <div class="speaker-photo">
-          <div class="speaker-initials">AB</div>
-        </div>
+        <div class="speaker-photo"><div class="speaker-initials">AB</div></div>
         <div class="speaker-info">
           <div class="speaker-name">Dr. Allison Brend</div>
-          <div class="speaker-role">XXX<br>XXX</div>
-          <span class="speaker-tag">Faculty</span>
+          <div class="speaker-role">XXX</div>
         </div>
       </div>
 
       <div class="speaker-card">
-        <div class="speaker-photo">
-          <div class="speaker-initials">JC</div>
-        </div>
+        <div class="speaker-photo"><div class="speaker-initials">JC</div></div>
         <div class="speaker-info">
           <div class="speaker-name">Dra. Jessica Cantillo Negrete</div>
-          <div class="speaker-role">Subdirección de Investigación Tecnológica<br>Instituto Nacional de Rehabilitación, Mexico</div>
-          <span class="speaker-tag">Faculty</span>
+          <div class="speaker-role">Subdirección de Investigación Tecnológica, Instituto Nacional de Rehabilitación</div>
         </div>
       </div>
 
       <div class="speaker-card">
-        <div class="speaker-photo">
-          <div class="speaker-initials">BT</div>
-        </div>
+        <div class="speaker-photo"><div class="speaker-initials">BT</div></div>
         <div class="speaker-info">
           <div class="speaker-name">Dra. Blanca Tovar</div>
-          <div class="speaker-role">Laboratorio de Instrumentación y Procesamiento de Señales (LIPS)<br>Instituto Politécnico Nacional, Mexico</div>
-          <span class="speaker-tag">Faculty</span>
+          <div class="speaker-role">Laboratorio de Instrumentación y Procesamiento de Señales, Instituto Politécnico Nacional</div>
         </div>
       </div>
 
       <div class="speaker-card tbd">
-        <div class="speaker-photo">
-          <div class="speaker-initials">+</div>
-        </div>
+        <div class="speaker-photo"><div class="speaker-initials">+</div></div>
         <div class="speaker-info">
-          <div class="speaker-name">Speaker TBD</div>
-          <div class="speaker-role">Additional faculty will be announced as confirmations are received</div>
-          <span class="speaker-tag">Coming soon</span>
+          <div class="speaker-name">More faculty to be announced</div>
+          <div class="speaker-role">Confirmations ongoing</div>
         </div>
       </div>
 
@@ -879,25 +605,12 @@
   <div class="container">
     <div class="section-label">Venue</div>
     <h2>Tecnologico de Monterrey, Campus Guadalajara</h2>
+    <p class="venue-caption">Av. General Ramón Corona 2514, Zapopan, Jalisco &nbsp;·&nbsp; XXX, 2027</p>
     <div class="venue-grid">
-      <div class="venue-text">
-        <p>The school will be hosted at <strong>Tecnologico de Monterrey, Campus Guadalajara</strong>, one of Mexico's leading research universities and a hub for biomedical engineering and neurotechnology in the region.</p>
-        <p>Guadalajara, the capital of Jalisco, is Mexico's second-largest city and a vibrant center for science, technology, and culture — making it an ideal setting for an international training school.</p>
-        <p>Detailed information about accommodation, transportation, and local logistics will be provided to accepted participants.</p>
-        <div class="venue-features">
-          <div class="venue-feature">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Av. General Ramón Corona 2514, Zapopan, Jalisco
-          </div>
-          <div class="venue-feature">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
-            State-of-the-art research labs and lecture facilities
-          </div>
-          <div class="venue-feature">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            XXX, 2027 — exact dates to be confirmed
-          </div>
-        </div>
+      <div class="venue-photo">
+        <!-- Replace src with an actual campus photo when available -->
+        <img src="" alt="Tecnologico de Monterrey Campus Guadalajara" onerror="this.parentElement.classList.add('no-img')">
+        <div class="venue-photo-placeholder">Campus photo coming soon</div>
       </div>
       <div class="venue-map">
         <iframe
@@ -915,40 +628,27 @@
     <div class="section-label">How to Apply</div>
     <h2>Applications open · 2026</h2>
     <div class="apply-grid">
-      <div>
-        <div class="apply-box">
-          <h3>Who can apply?</h3>
-          <ul>
-            <li>MSc and PhD students in neuroscience, engineering, or related fields</li>
-            <li>Postdoctoral fellows and early-career researchers</li>
-            <li>Strong preference for applicants from Latin America and underrepresented regions</li>
-            <li>Basic programming experience in Python is recommended</li>
-          </ul>
-        </div>
-        <div class="travel-grant-box">
-          <h3>
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            IBRO Travel Grants Available
-          </h3>
-          <p>Thanks to IBRO Schools Support funding, <strong style="color:rgba(255,255,255,0.85)">travel grants are available</strong> to cover travel, accommodation, and meals for selected participants. Priority will be given to applicants from economically disadvantaged backgrounds and underrepresented regions. Financial constraints should never prevent talented researchers from accessing world-class training.</p>
-        </div>
+      <div class="apply-box">
+        <h3>Who can apply?</h3>
+        <ul>
+          <li>MSc and PhD students in neuroscience, engineering, or related fields</li>
+          <li>Postdoctoral fellows and early-career researchers</li>
+          <li>Strong preference for applicants from Latin America and underrepresented regions</li>
+          <li>Basic programming experience in Python is recommended</li>
+          <li>Travel support available for participants who need financial assistance</li>
+        </ul>
       </div>
       <div class="apply-box">
         <h3>Application process</h3>
         <ul>
-          <li>Create an applicant account on the IBRO Grants Portal</li>
-          <li>Complete the online application form including a motivation letter</li>
-          <li>Provide a brief CV and a summary of your current research</li>
-          <li>Indicate whether you are applying for an IBRO travel grant</li>
-          <li>Applications reviewed on a rolling basis — apply early</li>
+          <li>XXX</li>
+          <li>XXX</li>
+          <li>XXX</li>
+          <li>XXX</li>
         </ul>
         <br>
         <p style="color:rgba(255,255,255,0.4); font-size:0.82rem;">Application deadline: <strong style="color:rgba(255,255,255,0.6)">XXX, 2026</strong><br>Notification of decisions: <strong style="color:rgba(255,255,255,0.6)">XXX, 2026</strong></p>
       </div>
-    </div>
-    <div class="apply-cta">
-      <a href="https://ibro.smapply.org/acc/r/" class="btn-primary" target="_blank">Apply via IBRO Portal →</a>
-      <p class="apply-deadline">Applications are managed through the official IBRO Grants Portal (ibro.smapply.org)</p>
     </div>
   </div>
 </section>
@@ -958,33 +658,13 @@
   <div class="container">
     <div class="section-label">Organizers</div>
     <h2>Hosted by NTLab at Tec de Monterrey</h2>
-    <p class="section-intro">This school is organized by the <a href="https://mauricioantelis.github.io/" target="_blank" style="color:var(--blue)">Neurotechnology and Brain-Computer Interface Laboratory (NTLab)</a> at Tecnologico de Monterrey, Campus Guadalajara, in partnership with IBRO.</p>
+    <p class="section-intro">This school is organized by the <a href="https://mauricioantelis.github.io/" target="_blank" style="color:var(--blue-light)">Neurotechnology and Brain-Computer Interface Laboratory (NTLab)</a> at Tecnologico de Monterrey, Campus Guadalajara.</p>
     <div class="organizers-grid">
       <div class="org-card">
-        <div class="org-logo-placeholder">
-          <img src="https://ibro.org/wp-content/themes/ibro/img/IBRO_logo_main.svg" alt="IBRO">
-        </div>
-        <div>
-          <div class="org-name">IBRO</div>
-          <div class="org-sub">International Brain Research Organization</div>
-        </div>
-      </div>
-      <div class="org-card">
-        <div class="org-logo-placeholder" style="background:#003087;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/ITESM_Logo.svg/320px-ITESM_Logo.svg.png" alt="Tec de Monterrey">
-        </div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/ITESM_Logo.svg/320px-ITESM_Logo.svg.png" alt="Tec de Monterrey" class="org-logo">
         <div>
           <div class="org-name">Tecnologico de Monterrey</div>
           <div class="org-sub">Campus Guadalajara</div>
-        </div>
-      </div>
-      <div class="org-card">
-        <div class="org-logo-placeholder" style="background: var(--navy-mid);">
-          <span style="color:var(--accent); font-weight:700; font-size:0.9rem;">NTLab</span>
-        </div>
-        <div>
-          <div class="org-name">NTLab</div>
-          <div class="org-sub">Neurotechnology & BCI Laboratory</div>
         </div>
       </div>
     </div>
@@ -996,7 +676,7 @@
   <div class="container">
     <div class="section-label">Contact</div>
     <h2>Get in touch</h2>
-    <p class="section-intro">For inquiries about the school, the application process, or travel grants, please contact the organizing team.</p>
+    <p class="section-intro">For inquiries about the school or the application process, please reach out to the organizing team.</p>
     <a href="mailto:XXX@tec.mx" class="contact-email">XXX@tec.mx</a>
     <p class="contact-lab">
       Organized by the <a href="https://mauricioantelis.github.io/" target="_blank">Neurotechnology and BCI Laboratory (NTLab)</a><br>
@@ -1006,7 +686,7 @@
 </section>
 
 <footer>
-  <p>© 2027 1st Latin American Training School on Neuroengineering and Brain-Computer Interfaces · Supported by <a href="https://ibro.org" target="_blank">IBRO</a></p>
+  <p>© 2027 1st Latin American Training School on Neuroengineering and Brain-Computer Interfaces</p>
 </footer>
 
 <script>
